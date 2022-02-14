@@ -4,13 +4,14 @@
     box-sizing: border-box;
 }
 
-#main-container {
-    width: 80vw;
-    height: 90vh;
-    margin-top: 5vh;
-    background-color: pink;
-    
+body {
+    background: linear-gradient(180deg, #1c8575 20%, #cdded0 20%);
+}
 
+#app {
+    width: 80vw;
+    height: 95vh;
+    margin-top: 5vh;
 }
 
 #header {
@@ -28,9 +29,6 @@
 
 #header .left-side, #header .right-side {
     display: flex;
-    border: solid;
-    border-width: 1px;
-    border-color: grey;
     justify-content: space-between;
 }
 
@@ -121,4 +119,5 @@
     min-height: 40px;
     min-width: 90%;
     align-self: center;
+    padding: 5px;
 }
