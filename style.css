@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main-container {
+    width: 80vw;
+    height: 90vh;
+    margin-top: 5vh;
+    background-color: pink;
+    
+
+}
+
+#header {
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+    max-height: 100px;
+}
+
+.avatar {
+    border-radius: 50%;
+    max-height: 80px;
+    margin: 10px;
+}
+
+#header .left-side, #header .right-side {
+    display: flex;
+    border: solid;
+    border-width: 1px;
+    border-color: grey;
+    justify-content: space-between;
+}
+
+.left-side h6, .right-side h6 {
+    align-self: center;
+}
+
+.header-user, .header-icons{
+    display: flex;
+}
+
+.header-icons {
+    align-items: center;
+    justify-content: right;
+
+}
+
+.header-icons i {
+    color: #a2a2a2;
+    margin: 5px;
+    width: 20px;
+ 
+}
+
+#main-chat .row .left-side {
+    min-height: 75vh;
+    background-color: #eaeaea;
+}
+
+#main-chat .row .left-side .row {
+    min-height: 10vh;
+    display: flex;
+
+}
+
+
+#main-chat .row .left-side #alert {
+    background-color: #7ed1fb;
+}
+
+#main-chat .row .left-side .row i {
+    min-height: 50px;
+    min-width: 50px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    fill: powderblue;
+    align-self: center;
+    vertical-align: center;
+}
+
+#main-chat .row .left-side #search-bar {
+    background-color: #fff;
+}
+
+#main-chat .row .left-side #search-bar input {
+    border-radius: 5px;
+    max-width: 90%;
+    margin: auto;
+    max-height: 30px;
+    align-self: center;
+}
+
+.thumbnails img {
+    max-width: 80px;
+    align-self: left;
+}
+
+#main-chat .right-side {
+    background-image: url(img/mine.jpg);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#message-bar {
+    background-color: #f1eae4;
+    min-height: 80px;
+}
+
+#message-bar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#message-bar input {
+    border-radius: 5px;
+    min-height: 40px;
+    min-width: 90%;
+    align-self: center;
+}
