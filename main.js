@@ -14,6 +14,16 @@ const app = new Vue (
                             date: '10/01/2020 15:30:55',
                             text: 'Hai risolto il problema di javascript?',
                             status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            text: 'Ricordati di usare il v-for',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 16:15:22',
+                            text: 'Tutto fatto!',
+                            status: 'received'
                         }
                     ]
                 },
@@ -23,8 +33,18 @@ const app = new Vue (
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
-                            text: 'Hai risolto il problema di javascript?',
+                            date: '20/03/2020 16:30:00',
+                            text: 'Ciao come stai?',
+                            status: 'received'
+                        },
+                        {
+                            date: '20/03/2020 16:30:55',
+                            text: 'Hai fatto i compiti?',
+                            status: 'received'
+                        },
+                        {
+                            date: '20/03/2020 16:35:00',
+                            text: 'Non ancora, devo finire di fare la spesa.',
                             status: 'sent'
                         }
                     ]
@@ -35,9 +55,19 @@ const app = new Vue (
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
-                            text: 'Hai risolto il problema di javascript?',
+                            date: '28/03/2020 10:10:40',
+                            text: 'La Beppa va in campagna',
+                            status: 'received'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            text: 'Sicura di non aver sbagliato chat?',
                             status: 'sent'
+                        },
+                        {
+                            date: '28/03/2020 10:20:10',
+                            text: 'Ah! Scusa!',
+                            status: 'received'
                         }
                     ]
                 },
@@ -48,13 +78,33 @@ const app = new Vue (
                     messages: [
                         {
                             date: '10/01/2020 15:30:55',
-                            text: 'Hai risolto il problema di javascript?',
+                            text: 'Comunque ragazzi, molto bello Vue!',
                             status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            text: 'Una figata!',
+                            status: 'received'
                         }
-                    ]
-                }
-            ]
+                    ],
+                },
+            ],
+        methods: {
+            assignActive(index) {
+                this.active = index;
+            },
+            addNewMessage() {
+                const newMessageOb = {
+                    date: 'now',
+                    text: this.newMessage,
+                    status: 'sent'
+                };
+                  
+                this.messages.push(newMessageOb);
+                this.newMessage = ''
 
-        }
-    }
+            },
+        },
+    },
+},
 )

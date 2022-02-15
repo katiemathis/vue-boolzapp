@@ -88,10 +88,22 @@ body {
     padding: 13px;
     border-radius: 50%;
     margin-top: 12px;
+    margin-right: 10px;
     color: #7ed1fb;
-    align-self: center;
     vertical-align: center;
+    float: left;
     
+}
+#notifiche {
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 600;
+    line-height: 1px;
+}
+
+#main-chat .row .left-side .row a {
+    line-height: 1px;
+    font-size: small;
 }
 
 #main-chat .row .left-side #search-bar {
@@ -135,22 +147,21 @@ body {
 
 
 .msg-rcvd, .msg-sent {
-    max-width: 400px;
+    max-width: 300px;
     text-overflow: wrap;
     border-radius: 5px;
     margin: 10px 30px;
-    line-height: 50px;
+    line-height: 2px;
     vertical-align: center;
 }
 
 .msg-rcvd {
-    background-color: white;
+    background-color: #fff;
     
 }
 
 .msg-sent {
-    background-color: green;
-    color: white;
+    background-color: #cefbac;
     margin-left: auto;
 }
 
@@ -178,3 +189,31 @@ body {
     align-self: center;
     padding: 5px;
 }
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.msg-text {
+    padding: 10px 10px 0 10px;
+}
+
+.msg-date, .msg-status {
+    padding: 10px;
+    font-size: x-small;
+    font-style: italic;
+    text-align: right;
+    color: grey;
+}
+
+
+.text-preview, .date-preview {
+    padding: 0;
+    line-height: 3px;    
+    font-size: small;
+    font-style: italic;
+} 
