@@ -28,8 +28,9 @@
                 </div>
                 <div class="col-8 right-side">
                         <div class="header-user col-7">
-                            <img class="avatar img-fluid" src="img/avatar_6.jpg" alt="avatar Sally">
-                            <h6>Amber</h6>
+                            <img class="avatar img-fluid" src="img/avatar_2.jpg" alt="avatar Marianna">
+                            <h6>Marianna</h6>
+
                         </div>
                         <div class="header-icons col-5">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -52,15 +53,14 @@
                     <div id="search-bar" class="row">
                         <input class="margin-auto" type="text">
                     </div>
-                    <div class="row thumbnails">
-                        <!-- this is where the array of objects will go (icon, name, message preview, etc.)-->
-                        <img class="avatar" src="img/avatar_io.jpg" alt="avatar io">
-                        <h6>Jessica</h6>
-                    </div>
-                    <div class="row thumbnails">
-                        <!-- this is where the array of objects will go (icon, name, message preview, etc.)-->
-                        <img class="avatar" src="img/avatar_io.jpg" alt="avatar io">
-                        <h6>Alessandra</h6>
+                    <div class="row thumbnails" v-for="(contact, index) in contacts">
+                        <div class="contact-photo col-4">
+                            <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="avatar Marianna">
+                        </div>
+                        <div class="contact-name col-8">
+                            <h6>{{contact.nome}}</h6>
+                            <p>Text preview</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-8 right-side">

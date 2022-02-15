@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(180deg, #1c8575 20%, #cdded0 20%);
+    background: linear-gradient(180deg, #1c8575 20%, #d0d3cd 20%);
 }
 
 #app {
@@ -47,9 +47,10 @@ body {
 }
 
 .header-icons i {
-    color: #a2a2a2;
+    color: #b1b1b1;
     margin: 5px;
-    width: 20px;
+    font-size: 20px;
+    padding: 2%;
  
 }
 
@@ -65,19 +66,32 @@ body {
 }
 
 
+
+.contact-photo {
+    display: flex;
+}
+
+.contact-name {
+    margin-top: 20px;
+}
+
+
 #main-chat .row .left-side #alert {
     background-color: #7ed1fb;
 }
 
 #main-chat .row .left-side .row i {
-    min-height: 50px;
-    min-width: 50px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
     background-color: white;
-    padding: 5px;
+    padding: 13px;
     border-radius: 50%;
-    fill: powderblue;
+    margin-top: 12px;
+    color: #7ed1fb;
     align-self: center;
     vertical-align: center;
+    
 }
 
 #main-chat .row .left-side #search-bar {
@@ -92,8 +106,12 @@ body {
     align-self: center;
 }
 
+.active {
+    background-color: #fff;
+}
+
 .thumbnails img {
-    max-width: 80px;
+    max-width: 60px;
     align-self: left;
 }
 
@@ -106,6 +124,11 @@ body {
 #message-bar {
     background-color: #f1eae4;
     min-height: 80px;
+}
+
+#message-bar i {
+    font-size: 30px;
+    color: #b1b1b1;
 }
 
 #message-bar div {
