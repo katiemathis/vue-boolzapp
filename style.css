@@ -118,12 +118,46 @@ body {
 #main-chat .right-side {
     background-image: url(img/mine.jpg);
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-msg-area {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+
+.main-msg-area .conatiner {
+    padding: 10px 30px;
+}
+
+
+.msg-rcvd, .msg-sent {
+    max-width: 400px;
+    text-overflow: wrap;
+    border-radius: 5px;
+    margin: 10px 30px;
+    line-height: 50px;
+    vertical-align: center;
+}
+
+.msg-rcvd {
+    background-color: white;
+    
+}
+
+.msg-sent {
+    background-color: green;
+    color: white;
+    margin-left: auto;
 }
 
 #message-bar {
     background-color: #f1eae4;
     min-height: 80px;
+
 }
 
 #message-bar i {
