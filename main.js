@@ -104,6 +104,17 @@ const app = new Vue (
                 this.contacts[this.active].messages.push(newMessageOb);
                 this.newMessage = '';
 
+                const newReply = {
+                    date: 'now',
+                    text: 'ok',
+                    status: 'received',
+                };
+
+                let that = this;
+                setTimeout(function() {
+                    that.contacts[that.active].messages.push(newReply)
+                }, 1000);
+
             },
         },
     },
