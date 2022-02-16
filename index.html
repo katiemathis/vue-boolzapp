@@ -84,18 +84,29 @@
                     <div class="row thumbnails" 
                          v-for="(contact, index) in contacts"
                          :class="(active==index)?'active':''" 
-                         v-for="result in resultQuery"
-                         :class="contact.includes(result)?'show':'hide'" 
                          @click="assignActive(index)"
-                    >
-                        <div class="contact-photo col-4">
-                            <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.nome">
-                        </div>
+                    >   
+                        <!-- v-for="(result, index) in resultQuery"-->
+                        <!--:class="contact.includes(result)?'show':'hide'"-->
+
+                        <!--<div v-if="resultQuery.length > 0">
+                            <div class="contact-photo col-4">
+                                <img class="avatar" :src="'img/avatar' + result.avatar + '.jpg'" alt="'avatar' + result.nome">
+                            </div>
+                            <div class="contact-name col-8">
+                                <h6>{{result.nome}}</h6>
+                            </div>
+                        </div> -->
+                       <!-- <div v-else>-->
+                            <div class="contact-photo col-4">
+                                <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.nome">
+                            </div>
                             <div class="contact-name col-8">
                                 <h6>{{contact.nome}}</h6>
                                 <p class="text-preview">{{contact.messages.text}}</p> 
                                 <p class="date-preview">{{contact.messages.date}}</p>
                             </div>
+                        <!--</div>-->
                     </div>
                 </div>
 

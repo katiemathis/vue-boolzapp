@@ -5,6 +5,7 @@ const app = new Vue (
             newMessage: '',
             active: 0,
             searchQuery: null,
+            searchQueryContacts: [],
             contacts: [
                 {
                     nome: 'Marianna',
@@ -120,15 +121,14 @@ const app = new Vue (
         },
         computed: {
             resultQuery() {
-              if (this.searchQuery) {
-                return this.contacts.filter(item => {
-                  return this.searchQuery
-                    .toLowerCase()
-                    .split(" ")
-                    .every(v => item.nome.toLowerCase().includes(v));
+                if (this.searchQuery) {
+                    return this.contacts.filter(item => {
+                    return this.searchQuery
+                        .toLowerCase()
+                        .split(" ")
+                        .every(v => item.nome.toLowerCase().includes(v));
+                    });
                     
-                });
-
               } else {
                 return this.contacts;
               
