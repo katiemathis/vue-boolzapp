@@ -41,8 +41,8 @@
 
                 <div class="col-8 right-side">
                         <div class="header-user col-7">
-                            <img class="avatar img-fluid" src="img/avatar_2.jpg" alt="avatar Marianna">
-                            <h6>Marianna</h6>
+                            <img class="avatar img-fluid" :src="'img/avatar' + contacts[active].avatar + '.jpg'" alt="'avatar' + contacts[active].nome">
+                            <h6>{{contacts[active].nome}}</h6>
                         </div>
                         <div class="header-icons col-5">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -79,7 +79,7 @@
                     
                     <!-- left side bar contacts with msg previews-->
 
-                    <div class="row thumbnails" v-for="(contact, index) in contacts" @click="assignActive(index)">
+                    <div class="row thumbnails" :class="(active==index)?'active':''" v-for="(contact, index) in contacts" @click="assignActive(index)">
                         <div class="contact-photo col-4">
                             <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.nome">
                         </div>

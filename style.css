@@ -128,7 +128,7 @@ body {
 }
 
 .active {
-    background-color:black;
+    background-color:#e5e6e6;
 }
 
 .thumbnails img {
@@ -150,17 +150,17 @@ body {
 }
 
 
-.main-msg-area .conatiner {
+.main-msg-area .container {
     padding: 10px 30px;
 }
 
 
 .msg-rcvd, .msg-sent {
-    max-width: 300px;
+    max-width: 400px;
     text-overflow: wrap;
     border-radius: 5px;
     margin: 10px 30px;
-    line-height: 2px;
+    line-height: 10px;
     vertical-align: center;
 }
 

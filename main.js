@@ -44,7 +44,7 @@ const app = new Vue (
                         },
                         {
                             date: '20/03/2020 16:35:00',
-                            text: 'Non ancora, devo finire di fare la spesa.',
+                            text: 'Non ho ancora finito i bonus.',
                             status: 'sent'
                         }
                     ]
@@ -89,13 +89,14 @@ const app = new Vue (
                     ],
                 },
             ],
+        },
         methods: {
             assignActive(index) {
                 this.active = index;
             },
             addNewMessage: function () {
                 const newMessageOb = {
-                    date: dayjs().format('DD-MM-YYYY HH:mm:ss'),
+                    date: 'now',
                     text: this.newMessage,
                     status: 'sent'
                 };
@@ -106,5 +107,4 @@ const app = new Vue (
             },
         },
     },
-},
 )
