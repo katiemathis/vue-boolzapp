@@ -93,15 +93,15 @@ const app = new Vue (
             assignActive(index) {
                 this.active = index;
             },
-            addNewMessage() {
+            addNewMessage: function () {
                 const newMessageOb = {
-                    date: 'now',
+                    date: dayjs().format('DD-MM-YYYY HH:mm:ss'),
                     text: this.newMessage,
                     status: 'sent'
                 };
                   
-                this.messages.push(newMessageOb);
-                this.newMessage = ''
+                this.contacts[this.active].messages.push(newMessageOb);
+                this.newMessage = '';
 
             },
         },

@@ -36,6 +36,13 @@ body {
     align-self: center;
 }
 
+.header-user p {
+    font-size: x-small;
+    font-style: italic;
+    padding-top:60px;
+    transform: translateX(-120%)
+}
+
 .header-user, .header-icons{
     display: flex;
 }
@@ -98,12 +105,14 @@ body {
     font-size: 15px;
     margin-top: 20px;
     font-weight: 600;
-    line-height: 1px;
+    word-wrap: normal;
+    overflow-wrap: normal;
 }
 
 #main-chat .row .left-side .row a {
     line-height: 1px;
     font-size: small;
+    padding-bottom: 30px;
 }
 
 #main-chat .row .left-side #search-bar {
@@ -119,7 +128,7 @@ body {
 }
 
 .active {
-    background-color: #fff;
+    background-color:black;
 }
 
 .thumbnails img {
