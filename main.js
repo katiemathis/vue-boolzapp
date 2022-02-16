@@ -4,6 +4,7 @@ const app = new Vue (
         data: {
             newMessage: '',
             active: 0,
+            searchQuery: null,
             contacts: [
                 {
                     nome: 'Marianna',
@@ -96,7 +97,7 @@ const app = new Vue (
             },
             addNewMessage: function () {
                 const newMessageOb = {
-                    date: 'now',
+                    date: dayjs().format('DD-MM-YYYY HH:mm:ss'),
                     text: this.newMessage,
                     status: 'sent'
                 };
@@ -105,7 +106,7 @@ const app = new Vue (
                 this.newMessage = '';
 
                 const newReply = {
-                    date: 'now',
+                    date: dayjs().format('DD-MM-YYYY HH:mm:ss'),
                     text: 'ok',
                     status: 'received',
                 };
@@ -117,5 +118,26 @@ const app = new Vue (
 
             },
         },
+        computed: {
+            resultQuery() {
+              if (this.searchQuery) {
+                return this.contacts.filter(item => {
+                  return this.searchQuery
+                    .toLowerCase()
+                    .split(" ")
+                    .every(v => item.nome.toLowerCase().includes(v));
+                    
+                });
+
+              } else {
+                return this.contacts;
+              
+              }
+            }
+            
+            
+        }
+
+
     },
 )

@@ -74,22 +74,28 @@
                     <!-- left side bar search bar -->
 
                     <div id="search-bar" class="search-input-wrapper row">
-                        <input type="text" class="margin-auto search-input">
+                        <input v-model="searchQuery">
+                            <div v-for="r of resultQuery" :key="r.id">{{r.title}}</div>
+                        <!-- <input type="text" class="margin-auto search-input"> -->
                     </div>
                     
                     <!-- left side bar contacts with msg previews-->
 
-                    <div class="row thumbnails" :class="(active==index)?'active':''" v-for="(contact, index) in contacts" @click="assignActive(index)">
+                    <div class="row thumbnails" 
+                         v-for="(contact, index) in contacts"
+                         :class="(active==index)?'active':''" 
+                         v-for="result in resultQuery"
+                         :class="contact.includes(result)?'show':'hide'" 
+                         @click="assignActive(index)"
+                    >
                         <div class="contact-photo col-4">
                             <img class="avatar" :src="'img/avatar' + contact.avatar + '.jpg'" alt="'avatar' + contact.nome">
                         </div>
-                        <div class="contact-name col-8">
-
-                            <!-- v-for="(message, index) in contacts[active].messages" -->
-                            <h6>{{contact.nome}}</h6>
-                            <p class="text-preview">Text Preview</p>
-                            <p class="date-preview">Date</p>
-                        </div>
+                            <div class="contact-name col-8">
+                                <h6>{{contact.nome}}</h6>
+                                <p class="text-preview">{{contact.messages.text}}</p> 
+                                <p class="date-preview">{{contact.messages.date}}</p>
+                            </div>
                     </div>
                 </div>
 
@@ -142,6 +148,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="main.js"></script>
     
 </body>

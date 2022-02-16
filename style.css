@@ -141,6 +141,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-y: scroll;
 }
 
 .main-msg-area {
@@ -152,6 +153,7 @@ body {
 
 .main-msg-area .container {
     padding: 10px 30px;
+    
 }
 
 
