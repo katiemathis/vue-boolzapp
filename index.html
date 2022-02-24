@@ -74,9 +74,11 @@
                     <!-- left side bar search bar -->
 
                     <div id="search-bar" class="search-input-wrapper row">
-                        <input v-model="searchQuery">
-                            <div v-for="r of resultQuery" :key="r.id">{{r.title}}</div>
-                        <!-- <input type="text" class="margin-auto search-input"> -->
+                       <!-- <input v-model="searchQuery">
+                            <div v-for="r of resultQuery" :key="r.id">{{r.title}}</div> -->
+                        <input type="text" class="margin-auto search-input" 
+                        v-model="searchContactText"
+                        @keyup="searchContact">
                     </div>
                     
                     <!-- left side bar contacts with msg previews-->
@@ -85,6 +87,8 @@
                          v-for="(contact, index) in contacts"
                          :class="(active==index)?'active':''" 
                          @click="assignActive(index)"
+                         v-if="contact.visible == true"
+                         
                     >   
                         <!-- v-for="(result, index) in resultQuery"-->
                         <!--:class="contact.includes(result)?'show':'hide'"-->
@@ -108,6 +112,7 @@
                             </div>
                         <!--</div>-->
                     </div>
+  
                 </div>
 
                 <!-- right side of main chat -->

@@ -4,8 +4,7 @@ const app = new Vue (
         data: {
             newMessage: '',
             active: 0,
-            searchQuery: null,
-            searchQueryContacts: [],
+            searchContactText: '',
             contacts: [
                 {
                     nome: 'Marianna',
@@ -118,26 +117,19 @@ const app = new Vue (
                 }, 1000);
 
             },
-        },
-        computed: {
-            resultQuery() {
-                if (this.searchQuery) {
-                    return this.contacts.filter(item => {
-                    return this.searchQuery
-                        .toLowerCase()
-                        .split(" ")
-                        .every(v => item.nome.toLowerCase().includes(v));
-                    });
-                    
-              } else {
-                return this.contacts;
-              
-              }
-            }
-            
-            
+            searchContact () {
+                this.contacts.forEach((element) => {
+                    if(element.nome.toLowerCase().includes(this.searchContactText.toLowerCase())) {
+                        element.visible = true;
+                    } else {
+                        element.visible = false;
+                    };
+                });
+
+            },
         }
 
 
     },
 )
+
